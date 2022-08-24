@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  tweet-backend:
+    build: .
+    restart: always
+    ports: 
+      - 8001:8000
+    depends_on:
+      - mysqldb
+
+
+  mysqldb:
+    platform: linux/x86_64
+    image: "mysql:5.7"
+    restart: always
+    ports: 
+      - 3307:3306
+    environment:
+      MYSQL_DATABASE: tweetapp
+      MYSQL_USER: praveen
+      MYSQL_PASSWORD: praveen
+      MYSQL_ROOT_PASSWORD: praveen
+
+
