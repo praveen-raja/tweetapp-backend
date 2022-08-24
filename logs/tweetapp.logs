@@ -1,0 +1,301 @@
+2022-08-22T01:50:26.229+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T01:50:26.234+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T01:50:33.306+0530 INFO Started TweetappApplication in 7.523 seconds (JVM running for 9.158)
+2022-08-22T01:50:33.315+0530 INFO Application started
+2022-08-22T01:51:02.108+0530 INFO method invoked class com.tweetapp.controller.TweetController : findAllTweets()arguments : []
+2022-08-22T01:51:02.117+0530 INFO start findAllTweets()
+2022-08-22T01:51:02.117+0530 INFO end findAllTweets()
+2022-08-22T01:51:02.366+0530 INFO class com.tweetapp.controller.TweetController : findAllTweets()Response : [{"id":3,"text":"3rd tweet","tag":"","user":{"firstName":"Praveenkumar","lastName":"R","email":"praveen@gmail.com","loginId":true,"password":"Password@1","contactNumber":"9090909080"},"comments":[],"likedBy":[]},{"id":4,"text":"4th tweet","tag":"","user":{"firstName":"Praveenkumar","lastName":"R","email":"praveen@gmail.com","loginId":true,"password":"Password@1","contactNumber":"9090909080"},"comments":[],"likedBy":[]},{"id":5,"text":"my tweet","tag":"","user":{"firstName":"praveen","lastName":"raja","email":"praveen@mail.com","loginId":true,"password":"Password@1","contactNumber":"9524309842"},"comments":[],"likedBy":[]}]
+2022-08-22T02:24:48.093+0530 INFO method invoked class com.tweetapp.controller.TweetController : findAllUsers()arguments : []
+2022-08-22T02:24:48.128+0530 INFO start getAllUsers()
+2022-08-22T02:24:48.132+0530 INFO end getAllUsers()
+2022-08-22T02:24:48.649+0530 INFO class com.tweetapp.controller.TweetController : findAllUsers()Response : [{"firstName":"pk","lastName":"pk","email":"pk@mail.com","loginId":false,"password":"Password@1","contactNumber":"9000000012"},{"firstName":"Praveenkumar","lastName":"R","email":"praveen@gmail.com","loginId":true,"password":"Password@1","contactNumber":"9090909080"},{"firstName":"praveen","lastName":"raja","email":"praveen@mail.com","loginId":true,"password":"Password@1","contactNumber":"9524309842"}]
+2022-08-22T02:29:59.345+0530 INFO method invoked class com.tweetapp.controller.TweetController : logout()arguments : []
+2022-08-22T02:29:59.347+0530 INFO Start logout()
+2022-08-22T02:29:59.347+0530 INFO 
+2022-08-22T02:30:46.454+0530 INFO method invoked class com.tweetapp.controller.TweetController : login()arguments : ["praveen@gmail.com","Password@1"]
+2022-08-22T02:30:46.455+0530 INFO start login()
+2022-08-22T02:30:46.455+0530 INFO Username from path variable praveen@gmail.com Password from path variablePassword@1
+2022-08-22T02:30:46.954+0530 INFO Username from repository praveen@gmail.com Password from repository Password@1
+2022-08-22T02:30:46.955+0530 INFO checking path values prior to save
+2022-08-22T02:30:46.956+0530 INFO saving user details
+2022-08-22T02:30:47.096+0530 INFO praveen@gmail.com
+2022-08-22T02:30:47.096+0530 INFO end getAllUsers()
+2022-08-22T02:30:47.096+0530 INFO Loggedin Successfully!!)
+2022-08-22T02:30:47.097+0530 INFO class com.tweetapp.controller.TweetController : login()Response : null
+2022-08-22T02:30:47.296+0530 INFO Kafka login: praveen@gmail.com
+2022-08-22T02:33:26.813+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 21036 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T02:33:26.818+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T02:33:34.843+0530 INFO Started TweetappApplication in 8.51 seconds (JVM running for 10.2)
+2022-08-22T02:33:34.854+0530 INFO Application started
+2022-08-22T02:34:25.465+0530 INFO method invoked class com.tweetapp.controller.TweetController : logout()arguments : []
+2022-08-22T02:34:25.475+0530 INFO Start logout()
+2022-08-22T02:34:25.476+0530 INFO 
+2022-08-22T02:34:35.950+0530 INFO method invoked class com.tweetapp.controller.TweetController : login()arguments : ["praveen@gmail.com","Password@1"]
+2022-08-22T02:34:35.951+0530 INFO start login()
+2022-08-22T02:34:35.951+0530 INFO Username from path variable praveen@gmail.com Password from path variablePassword@1
+2022-08-22T02:34:36.060+0530 INFO Username from repository praveen@gmail.com Password from repository Password@1
+2022-08-22T02:34:36.061+0530 INFO checking path values prior to save
+2022-08-22T02:34:36.061+0530 INFO saving user details
+2022-08-22T02:34:36.102+0530 INFO praveen@gmail.com
+2022-08-22T02:34:36.103+0530 INFO end getAllUsers()
+2022-08-22T02:34:36.103+0530 INFO Loggedin Successfully!!)
+2022-08-22T02:34:36.103+0530 INFO class com.tweetapp.controller.TweetController : login()Response : null
+2022-08-22T02:34:36.108+0530 INFO Kafka login: praveen@gmail.com
+2022-08-22T02:35:02.023+0530 INFO method invoked class com.tweetapp.controller.TweetController : postTweet()arguments : [{"id":null,"text":"hello this is pravee@gmail.com tweet","tag":"tweet intro","user":null,"comments":[],"likedBy":[]}]
+2022-08-22T02:35:02.024+0530 INFO start postTweet()
+2022-08-22T02:35:02.024+0530 INFO setting loggedIn user email to user Obj
+2022-08-22T02:35:02.024+0530 INFO User Tweet Foriegn value -> 
+2022-08-22T02:35:02.024+0530 INFO Tweet email address -> 
+2022-08-22T02:35:02.024+0530 INFO end postTweet()
+2022-08-22T02:35:02.024+0530 INFO Consumer output -->
+2022-08-22T02:35:02.210+0530 INFO class com.tweetapp.controller.TweetController : postTweet()Response : {"id":6,"text":"hello this is pravee@gmail.com tweet","tag":"tweet intro","user":{"firstName":null,"lastName":null,"email":"praveen@gmail.com","loginId":false,"password":null,"contactNumber":null},"comments":[],"likedBy":[]}
+2022-08-22T02:45:29.342+0530 INFO method invoked class com.tweetapp.controller.TweetController : getAllTweetsOfUser()arguments : ["praveen@gmail.com"]
+2022-08-22T02:45:29.343+0530 INFO start getAllTweetsOfUser()
+2022-08-22T02:45:29.558+0530 INFO fetching list of tweets
+2022-08-22T02:45:29.558+0530 INFO list of tweets -> 
+2022-08-22T02:45:29.558+0530 INFO end getAllTweetsOfUser()
+2022-08-22T02:45:29.610+0530 INFO class com.tweetapp.controller.TweetController : getAllTweetsOfUser()Response : [{"id":3,"text":"3rd tweet","tag":"","user":{"firstName":"Praveenkumar","lastName":"R","email":"praveen@gmail.com","loginId":true,"password":"Password@1","contactNumber":"9090909080"},"comments":[],"likedBy":[]},{"id":4,"text":"4th tweet","tag":"","user":{"firstName":"Praveenkumar","lastName":"R","email":"praveen@gmail.com","loginId":true,"password":"Password@1","contactNumber":"9090909080"},"comments":[],"likedBy":[]},{"id":6,"text":"hello this is pravee@gmail.com tweet","tag":"tweet intro","user":{"firstName":"Praveenkumar","lastName":"R","email":"praveen@gmail.com","loginId":true,"password":"Password@1","contactNumber":"9090909080"},"comments":[],"likedBy":[]}]
+2022-08-22T02:46:01.640+0530 INFO method invoked class com.tweetapp.controller.TweetController : logout()arguments : []
+2022-08-22T02:46:01.640+0530 INFO Start logout()
+2022-08-22T02:46:01.640+0530 INFO praveen@gmail.com
+2022-08-22T02:46:01.694+0530 INFO end logout()
+2022-08-22T02:46:01.694+0530 INFO class com.tweetapp.controller.TweetController : logout()Response : "Loggedout Successfully"
+2022-08-22T11:45:31.577+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T11:45:31.584+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T11:45:39.623+0530 INFO Started TweetappApplication in 8.612 seconds (JVM running for 10.771)
+2022-08-22T11:45:39.635+0530 INFO Application started
+2022-08-22T12:07:11.342+0530 INFO method invoked class com.tweetapp.controller.TweetController : login()arguments : ["praveen@gmail.com","Password@1"]
+2022-08-22T12:07:11.359+0530 INFO start login()
+2022-08-22T12:07:11.359+0530 INFO Username from path variable praveen@gmail.com Password from path variablePassword@1
+2022-08-22T12:07:12.161+0530 INFO Username from repository praveen@gmail.com Password from repository Password@1
+2022-08-22T12:07:12.161+0530 INFO checking path values prior to save
+2022-08-22T12:07:12.161+0530 INFO saving user details
+2022-08-22T12:07:12.335+0530 INFO Kafka login: praveen@gmail.com
+2022-08-22T12:07:12.835+0530 INFO praveen@gmail.com
+2022-08-22T12:07:12.835+0530 INFO end getAllUsers()
+2022-08-22T12:07:12.835+0530 INFO Loggedin Successfully!!)
+2022-08-22T12:07:12.835+0530 INFO class com.tweetapp.controller.TweetController : login()Response : null
+2022-08-22T12:07:45.336+0530 INFO method invoked class com.tweetapp.controller.TweetController : logout()arguments : []
+2022-08-22T12:07:45.337+0530 INFO Start logout()
+2022-08-22T12:07:45.337+0530 INFO praveen@gmail.com
+2022-08-22T12:07:45.403+0530 INFO end logout()
+2022-08-22T12:07:45.404+0530 INFO class com.tweetapp.controller.TweetController : logout()Response : "Loggedout Successfully"
+2022-08-22T12:08:12.254+0530 INFO method invoked class com.tweetapp.controller.TweetController : registerUser()arguments : [{"firstName":"Raja","lastName":"P","email":"raja@gmail.com","loginId":false,"password":"Password@1","contactNumber":"9998881110"}]
+2022-08-22T12:08:12.254+0530 INFO start registerUser()
+2022-08-22T12:08:12.254+0530 INFO setting values to user
+2022-08-22T12:08:12.254+0530 INFO end registerUser()
+2022-08-22T12:08:12.266+0530 INFO Kafka login: User Details Are: User(firstName=Raja, lastName=P, email=raja@gmail.com, loginId=false, password=Password@1, contactNumber=9998881110, tweets=[])
+2022-08-22T12:08:12.383+0530 INFO class com.tweetapp.controller.TweetController : registerUser()Response : {"firstName":"Raja","lastName":"P","email":"raja@gmail.com","loginId":false,"password":"Password@1","contactNumber":"9998881110"}
+2022-08-22T12:11:08.745+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:11:08.750+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:11:12.662+0530 INFO Started TweetappApplication in 4.202 seconds (JVM running for 1486.193)
+2022-08-22T12:11:12.669+0530 INFO Application started : TweetappApplication
+2022-08-22T12:11:51.241+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:11:51.243+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:11:53.385+0530 INFO Started TweetappApplication in 2.222 seconds (JVM running for 1526.923)
+2022-08-22T12:11:53.397+0530 INFO Application started : TweetappApplication
+2022-08-22T12:12:32.397+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:12:32.398+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:12:34.582+0530 INFO Started TweetappApplication in 2.261 seconds (JVM running for 1568.126)
+2022-08-22T12:12:34.586+0530 INFO Application started : TweetappApplication
+2022-08-22T12:12:42.583+0530 INFO Starting TweetappApplicationTests using Java 11.0.12 on ctsjava552 with PID 8564 (started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:12:42.591+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:13:02.454+0530 INFO Started TweetappApplicationTests in 20.665 seconds (JVM running for 26.73)
+2022-08-22T12:13:41.905+0530 INFO start login()
+2022-08-22T12:13:41.906+0530 INFO Username from path variable praveen@gmail.com Password from path variablePassword@1
+2022-08-22T12:13:41.935+0530 INFO Username from repository praveen@gmail.com Password from repository Password@1
+2022-08-22T12:13:41.936+0530 INFO checking path values prior to save
+2022-08-22T12:13:41.936+0530 INFO saving user details
+2022-08-22T12:13:41.946+0530 INFO Kafka login: praveen@gmail.com
+2022-08-22T12:13:41.989+0530 INFO praveen@gmail.com
+2022-08-22T12:13:41.990+0530 INFO end getAllUsers()
+2022-08-22T12:13:41.990+0530 INFO Loggedin Successfully!!)
+2022-08-22T12:14:24.325+0530 INFO start postTweet()
+2022-08-22T12:14:24.325+0530 INFO setting loggedIn user email to user Obj
+2022-08-22T12:14:24.325+0530 INFO User Tweet Foriegn value -> 
+2022-08-22T12:14:24.326+0530 INFO Tweet email address -> 
+2022-08-22T12:14:24.326+0530 INFO end postTweet()
+2022-08-22T12:14:24.326+0530 INFO Consumer output -->
+2022-08-22T12:14:30.160+0530 INFO Start logout()
+2022-08-22T12:14:30.160+0530 INFO praveen@gmail.com
+2022-08-22T12:14:30.217+0530 INFO end logout()
+2022-08-22T12:14:57.904+0530 INFO start registerUser()
+2022-08-22T12:14:57.904+0530 INFO setting values to user
+2022-08-22T12:14:57.904+0530 INFO end registerUser()
+2022-08-22T12:14:57.924+0530 INFO Kafka login: User Details Are: User(firstName=test, lastName=test, email=test@gmail.com, loginId=false, password=Password@1, contactNumber=9090909090, tweets=[])
+2022-08-22T12:15:32.664+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:15:32.665+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:15:34.936+0530 INFO Started TweetappApplication in 2.358 seconds (JVM running for 1748.51)
+2022-08-22T12:15:34.941+0530 INFO Application started : TweetappApplication
+2022-08-22T12:16:25.852+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:16:25.854+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:16:28.298+0530 INFO Started TweetappApplication in 2.514 seconds (JVM running for 1801.878)
+2022-08-22T12:16:28.306+0530 INFO Application started : TweetappApplication
+2022-08-22T12:19:12.054+0530 INFO method invoked class com.tweetapp.controller.TweetController : login()arguments : ["praveen@mail.com","Password@1"]
+2022-08-22T12:19:12.062+0530 INFO start login()
+2022-08-22T12:19:12.062+0530 INFO Username from path variable praveen@mail.com Password from path variablePassword@1
+2022-08-22T12:19:12.091+0530 INFO Username from repository praveen@mail.com Password from repository Password@1
+2022-08-22T12:19:12.091+0530 INFO checking path values prior to save
+2022-08-22T12:19:12.092+0530 INFO saving user details
+2022-08-22T12:19:12.099+0530 INFO praveen@mail.com
+2022-08-22T12:19:12.099+0530 INFO end getAllUsers()
+2022-08-22T12:19:12.099+0530 INFO Loggedin Successfully!!)
+2022-08-22T12:19:12.099+0530 INFO class com.tweetapp.controller.TweetController : login()Response : null
+2022-08-22T12:19:12.101+0530 INFO Kafka login: praveen@mail.com
+2022-08-22T12:22:39.501+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:22:39.502+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:22:42.140+0530 INFO Started TweetappApplication in 2.71 seconds (JVM running for 2176.142)
+2022-08-22T12:22:42.150+0530 INFO Application started : TweetappApplication
+2022-08-22T12:23:10.476+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:23:10.478+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:23:12.845+0530 INFO Started TweetappApplication in 2.454 seconds (JVM running for 2206.846)
+2022-08-22T12:23:12.850+0530 INFO Application started : TweetappApplication
+2022-08-22T12:23:26.047+0530 INFO method invoked class com.tweetapp.controller.TweetController : findAllUsers()arguments : []
+2022-08-22T12:23:26.053+0530 INFO start getAllUsers()
+2022-08-22T12:23:26.053+0530 INFO end getAllUsers()
+2022-08-22T12:23:36.492+0530 INFO method invoked class com.tweetapp.controller.TweetController : logout()arguments : []
+2022-08-22T12:23:36.492+0530 INFO Start logout()
+2022-08-22T12:23:36.492+0530 INFO 
+2022-08-22T12:24:32.058+0530 INFO method invoked class com.tweetapp.controller.TweetController : findAllUsers()arguments : []
+2022-08-22T12:24:32.059+0530 INFO start getAllUsers()
+2022-08-22T12:24:32.060+0530 INFO end getAllUsers()
+2022-08-22T12:25:01.080+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:25:01.081+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:25:03.394+0530 INFO Started TweetappApplication in 2.392 seconds (JVM running for 2317.396)
+2022-08-22T12:25:03.397+0530 INFO Application started : TweetappApplication
+2022-08-22T12:25:13.156+0530 INFO method invoked class com.tweetapp.controller.TweetController : findAllUsers()arguments : []
+2022-08-22T12:25:13.156+0530 INFO start getAllUsers()
+2022-08-22T12:25:13.156+0530 INFO end getAllUsers()
+2022-08-22T12:25:39.020+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:25:39.021+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:25:41.225+0530 INFO Started TweetappApplication in 2.269 seconds (JVM running for 2355.228)
+2022-08-22T12:25:41.228+0530 INFO Application started : TweetappApplication
+2022-08-22T12:25:53.815+0530 INFO method invoked class com.tweetapp.controller.TweetController : findAllUsers()arguments : []
+2022-08-22T12:25:53.821+0530 INFO start getAllUsers()
+2022-08-22T12:25:53.821+0530 INFO end getAllUsers()
+2022-08-22T12:25:53.841+0530 INFO class com.tweetapp.controller.TweetController : findAllUsers()Response : [{"firstName":"pk","lastName":"pk","email":"pk@mail.com","loginId":false,"password":"Password@1","contactNumber":"9000000012"},{"firstName":"Praveenkumar","lastName":"R","email":"praveen@gmail.com","loginId":false,"password":"Password@1","contactNumber":"9090909080"},{"firstName":"praveen","lastName":"raja","email":"praveen@mail.com","loginId":true,"password":"Password@1","contactNumber":"9524309842"},{"firstName":"Raja","lastName":"P","email":"raja@gmail.com","loginId":false,"password":"Password@1","contactNumber":"9998881110"},{"firstName":"test","lastName":"test","email":"test@gmail.com","loginId":false,"password":"Password@1","contactNumber":"9090909090"}]
+2022-08-22T12:26:13.701+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:26:13.702+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:26:15.940+0530 INFO Started TweetappApplication in 2.316 seconds (JVM running for 2389.946)
+2022-08-22T12:26:15.946+0530 INFO Application started : TweetappApplication
+2022-08-22T12:26:47.259+0530 INFO method invoked class com.tweetapp.controller.TweetController : findAllUsers()arguments : []
+2022-08-22T12:26:47.264+0530 INFO start getAllUsers()
+2022-08-22T12:26:47.264+0530 INFO end getAllUsers()
+2022-08-22T12:27:02.736+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:27:02.737+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:27:05.085+0530 INFO Started TweetappApplication in 2.42 seconds (JVM running for 2439.089)
+2022-08-22T12:27:05.091+0530 INFO Application started : TweetappApplication
+2022-08-22T12:27:11.820+0530 INFO method invoked class com.tweetapp.controller.TweetController : findAllUsers()arguments : []
+2022-08-22T12:27:11.826+0530 INFO start getAllUsers()
+2022-08-22T12:27:11.826+0530 INFO end getAllUsers()
+2022-08-22T12:27:11.843+0530 INFO Returning all user
+2022-08-22T12:27:11.845+0530 INFO class com.tweetapp.controller.TweetController : findAllUsers()Response : [{"firstName":"pk","lastName":"pk","email":"pk@mail.com","loginId":false,"password":"Password@1","contactNumber":"9000000012"},{"firstName":"Praveenkumar","lastName":"R","email":"praveen@gmail.com","loginId":false,"password":"Password@1","contactNumber":"9090909080"},{"firstName":"praveen","lastName":"raja","email":"praveen@mail.com","loginId":true,"password":"Password@1","contactNumber":"9524309842"},{"firstName":"Raja","lastName":"P","email":"raja@gmail.com","loginId":false,"password":"Password@1","contactNumber":"9998881110"},{"firstName":"test","lastName":"test","email":"test@gmail.com","loginId":false,"password":"Password@1","contactNumber":"9090909090"}]
+2022-08-22T12:29:11.912+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:29:11.913+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:29:14.188+0530 INFO Started TweetappApplication in 2.353 seconds (JVM running for 2568.194)
+2022-08-22T12:29:14.195+0530 INFO Application started : TweetappApplication
+2022-08-22T12:29:31.856+0530 INFO method invoked class com.tweetapp.controller.TweetController : login()arguments : ["praveen@maigl.com","Password"]
+2022-08-22T12:29:31.860+0530 INFO start login()
+2022-08-22T12:29:31.860+0530 INFO Username from path variable praveen@maigl.com Password from path variablePassword
+2022-08-22T12:30:05.031+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:30:05.032+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:30:07.261+0530 INFO Started TweetappApplication in 2.301 seconds (JVM running for 2621.267)
+2022-08-22T12:30:07.267+0530 INFO Application started : TweetappApplication
+2022-08-22T12:30:23.240+0530 INFO method invoked class com.tweetapp.controller.TweetController : login()arguments : ["praveen@gmail.com","Password@1"]
+2022-08-22T12:30:23.244+0530 INFO start login()
+2022-08-22T12:30:23.244+0530 INFO Username from path variable praveen@gmail.com, Password from path variablePassword@1
+2022-08-22T12:30:23.267+0530 INFO Username from repository praveen@gmail.com Password from repository Password@1
+2022-08-22T12:30:23.268+0530 INFO checking path values prior to save
+2022-08-22T12:30:23.268+0530 INFO saving user details
+2022-08-22T12:30:23.277+0530 INFO Kafka login: praveen@gmail.com
+2022-08-22T12:30:23.304+0530 INFO praveen@gmail.com
+2022-08-22T12:30:23.305+0530 INFO end getAllUsers()
+2022-08-22T12:30:23.305+0530 INFO praveen@gmail.com Loggedin Successfully!!)
+2022-08-22T12:30:23.305+0530 INFO class com.tweetapp.controller.TweetController : login()Response : null
+2022-08-22T12:30:36.701+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T12:30:36.702+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T12:30:39.116+0530 INFO Started TweetappApplication in 2.514 seconds (JVM running for 2653.122)
+2022-08-22T12:30:39.121+0530 INFO Application started : TweetappApplication
+2022-08-22T12:31:43.730+0530 INFO method invoked class com.tweetapp.controller.TweetController : logout()arguments : []
+2022-08-22T12:31:43.739+0530 INFO Start logout()
+2022-08-22T12:31:43.739+0530 INFO 
+2022-08-22T12:32:02.322+0530 INFO method invoked class com.tweetapp.controller.TweetController : login()arguments : ["praveen@gmail.com","Password@1"]
+2022-08-22T12:32:02.323+0530 INFO start login()
+2022-08-22T12:32:02.323+0530 INFO Username from path variable praveen@gmail.com, Password from path variablePassword@1
+2022-08-22T12:32:02.354+0530 INFO Username from repository praveen@gmail.com Password from repository Password@1
+2022-08-22T12:32:02.355+0530 INFO checking path values prior to save
+2022-08-22T12:32:02.355+0530 INFO saving user details
+2022-08-22T12:32:02.365+0530 INFO Kafka login: praveen@gmail.com
+2022-08-22T12:32:02.375+0530 INFO praveen@gmail.com
+2022-08-22T12:32:02.375+0530 INFO end getAllUsers()
+2022-08-22T12:32:02.376+0530 INFO praveen@gmail.com Loggedin Successfully!!
+2022-08-22T12:32:02.376+0530 INFO class com.tweetapp.controller.TweetController : login()Response : null
+2022-08-22T13:22:11.920+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T13:22:11.921+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T13:22:14.856+0530 INFO Started TweetappApplication in 3.054 seconds (JVM running for 5748.834)
+2022-08-22T13:22:14.860+0530 INFO Application started : TweetappApplication
+2022-08-22T13:23:55.011+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T13:23:55.012+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T13:23:57.366+0530 INFO Started TweetappApplication in 2.448 seconds (JVM running for 5851.344)
+2022-08-22T13:23:57.370+0530 INFO Application started : TweetappApplication
+2022-08-22T13:24:10.320+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T13:24:10.321+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T13:24:12.506+0530 INFO Started TweetappApplication in 2.26 seconds (JVM running for 5866.484)
+2022-08-22T13:24:12.512+0530 INFO Application started : TweetappApplication
+2022-08-22T13:24:42.942+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T13:24:42.943+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T13:24:45.333+0530 INFO Started TweetappApplication in 2.459 seconds (JVM running for 5899.312)
+2022-08-22T13:24:45.338+0530 INFO Application started : TweetappApplication
+2022-08-22T13:29:38.215+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12228 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T13:29:38.217+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T13:29:40.510+0530 INFO Started TweetappApplication in 2.361 seconds (JVM running for 6194.486)
+2022-08-22T13:29:40.518+0530 INFO Application started : TweetappApplication
+2022-08-22T13:38:50.826+0530 INFO Starting TweetappApplicationTests using Java 11.0.12 on ctsjava552 with PID 5504 (started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T13:38:50.838+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T13:39:13.975+0530 INFO Started TweetappApplicationTests in 23.955 seconds (JVM running for 29.425)
+2022-08-22T13:46:23.913+0530 INFO Starting TweetappApplicationTests using Java 11.0.12 on ctsjava552 with PID 1252 (started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T13:46:23.919+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T13:46:39.986+0530 INFO Started TweetappApplicationTests in 16.738 seconds (JVM running for 20.936)
+2022-08-22T13:47:49.745+0530 INFO Starting TweetappApplicationTests using Java 11.0.12 on ctsjava552 with PID 8520 (started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T13:47:49.750+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T13:48:05.006+0530 INFO Started TweetappApplicationTests in 15.948 seconds (JVM running for 19.904)
+2022-08-22T13:49:01.939+0530 INFO Starting TweetappApplicationTests using Java 11.0.12 on ctsjava552 with PID 16012 (started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T13:49:01.946+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T13:49:17.017+0530 INFO Started TweetappApplicationTests in 15.742 seconds (JVM running for 19.87)
+2022-08-22T13:52:55.435+0530 INFO Starting TweetappApplication using Java 11.0.12 on ctsjava552 with PID 12680 (C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp\target\classes started by cogjava1729 in C:\Users\cogjava1729\Desktop\FSE1\Comp-2\FSE1-Updated\tweetapp)
+2022-08-22T13:52:55.447+0530 INFO No active profile set, falling back to 1 default profile: "default"
+2022-08-22T13:53:04.589+0530 INFO Started TweetappApplication in 9.786 seconds (JVM running for 11.837)
+2022-08-22T13:53:04.603+0530 INFO Application started : TweetappApplication
+2022-08-22T13:53:34.893+0530 INFO method invoked class com.tweetapp.controller.TweetController : findAllUsers()arguments : []
+2022-08-22T13:53:34.932+0530 INFO start getAllUsers()
+2022-08-22T13:53:34.932+0530 INFO end getAllUsers()
+2022-08-22T13:53:35.178+0530 INFO Returning all user
+2022-08-22T13:53:35.180+0530 INFO class com.tweetapp.controller.TweetController : findAllUsers()Response : [{"firstName":"pk","lastName":"pk","email":"pk@mail.com","loginId":false,"password":"Password@1","contactNumber":"9000000012"},{"firstName":"Praveenkumar","lastName":"R","email":"praveen@gmail.com","loginId":true,"password":"Password@1","contactNumber":"9090909080"},{"firstName":"praveen","lastName":"raja","email":"praveen@mail.com","loginId":true,"password":"Password@1","contactNumber":"9524309842"},{"firstName":"Raja","lastName":"P","email":"raja@gmail.com","loginId":false,"password":"Password@1","contactNumber":"9998881110"},{"firstName":"test","lastName":"test","email":"test@gmail.com","loginId":false,"password":"Password@1","contactNumber":"9090909090"}]
+2022-08-22T14:24:07.889+0530 INFO method invoked class com.tweetapp.controller.TweetController : logout()arguments : []
+2022-08-22T14:24:08.080+0530 INFO Start logout()
+2022-08-22T14:24:08.081+0530 INFO 
+2022-08-22T14:53:21.497+0530 INFO method invoked class com.tweetapp.controller.TweetController : login()arguments : ["praveen@mail.com","Password\"1"]
+2022-08-22T14:53:21.531+0530 INFO start login()
+2022-08-22T14:53:21.532+0530 INFO Username from path variable praveen@mail.com, Password from path variablePassword"1
+2022-08-22T14:53:23.044+0530 INFO Username from repository praveen@mail.com Password from repository Password@1
+2022-08-22T14:53:23.045+0530 INFO checking path values prior to save
+2022-08-22T14:53:23.046+0530 INFO Please check your Input
+2022-08-22T14:53:23.050+0530 INFO class com.tweetapp.controller.TweetController : login()Response : null
+2022-08-22T14:53:24.152+0530 INFO Kafka login: praveen@mail.com
+2022-08-22T15:01:13.683+0530 INFO method invoked class com.tweetapp.controller.TweetController : findAllUsers()arguments : []
+2022-08-22T15:01:13.683+0530 INFO start getAllUsers()
+2022-08-22T15:01:13.684+0530 INFO end getAllUsers()
+2022-08-22T15:01:14.349+0530 INFO Returning all user
+2022-08-22T15:01:14.668+0530 INFO class com.tweetapp.controller.TweetController : findAllUsers()Response : [{"firstName":"pk","lastName":"pk","email":"pk@mail.com","loginId":false,"password":"Password@1","contactNumber":"9000000012"},{"firstName":"Praveenkumar","lastName":"R","email":"praveen@gmail.com","loginId":true,"password":"Password@1","contactNumber":"9090909080"},{"firstName":"praveen","lastName":"raja","email":"praveen@mail.com","loginId":true,"password":"Password@1","contactNumber":"9524309842"},{"firstName":"Raja","lastName":"P","email":"raja@gmail.com","loginId":false,"password":"Password@1","contactNumber":"9998881110"},{"firstName":"test","lastName":"test","email":"test@gmail.com","loginId":false,"password":"Password@1","contactNumber":"9090909090"}]
+2022-08-22T15:01:20.596+0530 INFO method invoked class com.tweetapp.controller.TweetController : findAllTweets()arguments : []
+2022-08-22T15:01:20.614+0530 INFO start findAllTweets()
+2022-08-22T15:01:20.630+0530 INFO end findAllTweets()
+2022-08-22T15:01:22.393+0530 INFO class com.tweetapp.controller.TweetController : findAllTweets()Response : [{"id":3,"text":"3rd tweet","tag":"","user":{"firstName":"Praveenkumar","lastName":"R","email":"praveen@gmail.com","loginId":true,"password":"Password@1","contactNumber":"9090909080"},"comments":[],"likedBy":[]},{"id":4,"text":"4th tweet","tag":"","user":{"firstName":"Praveenkumar","lastName":"R","email":"praveen@gmail.com","loginId":true,"password":"Password@1","contactNumber":"9090909080"},"comments":[],"likedBy":[]},{"id":5,"text":"my tweet","tag":"","user":{"firstName":"praveen","lastName":"raja","email":"praveen@mail.com","loginId":true,"password":"Password@1","contactNumber":"9524309842"},"comments":[],"likedBy":[]},{"id":6,"text":"hello this is pravee@gmail.com tweet","tag":"tweet intro","user":{"firstName":"Praveenkumar","lastName":"R","email":"praveen@gmail.com","loginId":true,"password":"Password@1","contactNumber":"9090909080"},"comments":[],"likedBy":[]},{"id":7,"text":"My tweet","tag":"","user":{"firstName":"Praveenkumar","lastName":"R","email":"praveen@gmail.com","loginId":true,"password":"Password@1","contactNumber":"9090909080"},"comments":[],"likedBy":[]}]
+2022-08-22T15:01:38.531+0530 INFO method invoked class com.tweetapp.controller.TweetController : searchByUsername()arguments : ["praveen@mail.com"]
+2022-08-22T15:01:38.532+0530 INFO start searchByUsername()
+2022-08-22T15:01:38.532+0530 INFO end searchByUsername()
+2022-08-22T15:01:39.937+0530 INFO class com.tweetapp.controller.TweetController : searchByUsername()Response : {"firstName":"praveen","lastName":"raja","email":"praveen@mail.com","loginId":true,"password":"Password@1","contactNumber":"9524309842"}
+2022-08-22T23:59:19.954+0530 INFO method invoked class com.tweetapp.controller.TweetController : logout()arguments : []
+2022-08-22T23:59:19.959+0530 INFO Start logout()
+2022-08-22T23:59:19.959+0530 INFO 
