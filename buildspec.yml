@@ -3,26 +3,26 @@ version: 0.2
 phases: 
   install: 
     commands: echo "Install phase is getting executed" 
-    pre_build: 
-      commands: 
-        - echo "Entered the pre-build phase" 
-        - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 420738364327.dkr.ecr.us-east-1.amazonaws.com 
-    build: 
-      commands: 
-        - echo "Entered build phase" 
-        - echo "Building Java" 
-        - ls 
-        - mvn compile 
-        - mvn package 
-        - echo "building docker image" 
-        - docker build -t praveen/tweetapp_backend . 
-        - docker tag praveen/tweetapp_backend 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest 
-    post_build: 
-      commands: 
-        - echo "Entered the post-build phase" 
-        - echo "Pushing Docker Image" 
-        - docker push 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest 
-        - echo writing deifinition file 
-        - printf '[{"name":"tweetapicont","imageUri":"%s"}]' 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest > imagedefinitions.json 
-  artifacts: 
-    files: imagedefinitions.json
+  pre_build: 
+    commands: 
+      - echo "Entered the pre-build phase" 
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 420738364327.dkr.ecr.us-east-1.amazonaws.com 
+  build: 
+    commands: 
+      - echo "Entered build phase" 
+      - echo "Building Java" 
+      - ls 
+      - mvn compile 
+      - mvn package 
+      - echo "building docker image" 
+      - docker build -t praveen/tweetapp_backend . 
+      - docker tag praveen/tweetapp_backend 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest 
+  post_build: 
+    commands: 
+      - echo "Entered the post-build phase" 
+      - echo "Pushing Docker Image" 
+      - docker push 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest 
+      - echo writing deifinition file 
+      - printf '[{"name":"tweetapicont","imageUri":"%s"}]' 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest > imagedefinitions.json 
+artifacts: 
+  files: imagedefinitions.json
