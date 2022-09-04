@@ -52,7 +52,7 @@ public class TweetController {
 
 	private static String loggedInUserEmailID = "";
 
-	@Value("${kafka.topic}")
+	@Value("${kafka.topic.value}")
 	private String topic;
 
 	static User users = new User();
