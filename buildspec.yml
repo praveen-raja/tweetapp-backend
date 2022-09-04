@@ -1,39 +1,40 @@
-#version: 0.2 
-#
-#phases: 
-#  build: 
-#    commands: 
-#      - echo "Entering build phase..." 
-#      - echo "Building Jar file with help of Maven" 
-#      - ls 
-#      - mvn clean install
-#      - echo "Building docker image" 
-#      - docker build -t praveenraja16/tweetapp:latest . 
-#     
-#  post_build: 
-#    commands: 
-#      - echo "Entered the post-build phase.." 
-#      - echo "Pushing Docker Image" 
-#      - docker push praveenraja16/tweetapp:latest 
-#      - echo writing deifinition file 
-#      - printf '[{"name":"tweetapp","imageUri":"%s"}]' praveenraja16/tweetapp:latest > imagedefinitions.json 
-#artifacts: 
-#  files: imagedefinitions.json
-
 version: 0.2 
 
 phases: 
-  build:
+
+  pre_build:
     commands:
-      - echo "ENTERING BUILD PHASE..."
-      - mvn clean install -DskipTests
-  
-  post_build:
-    commands:
-      - echo "BUILD COMPLETED SUCCESSFULLY :)"
+      - echo ENTERING PREBUILD PHASE ON `date`
+      - echo "CREATING JAR FILE..."
+      - mvn clean install
+      - echo "TWEET-APP.JAR CREATED SUCCESSFULLY..."
+      - aws --version
+      - $(aws ecr get-login --region $AWS_DEFAUT_REGION --no-include-email)
+      - REPOSITORY_URI=420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - IMAGE_TAG=build-$(echo $CODE_BUILD_ID | awk -F":" '{print $2}'
       
-artifacts:
-  files:
+  build: 
+    commands: 
+      - echo ENTERING BUILD PHASE ON `date` 
+      - echo "BUILDING DOCKER IMAGE" 
+      - docker build -t $REPOSITORY_URI:latest . 
+      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+      - echo DOCKER IMAGE BUILD SUCCESSFULLY 
+     
+  post_build: 
+    commands: 
+      - echo ENTERING POSTBUILD PHASE ON `date`
+      - echo "Pushing Docker Image to ECR" 
+      - docker push $REPOSITORY_URI:latest 
+      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - echo WRITING IMAGE DEFINITIONS FILE 
+      - printf '[{"name":"tweet-app","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - cat imagedefinitions.json
+      - echo DOKCER IMAGE PUSHED TO ECR SUCCESSFULLY 
+artifacts: 
+  files: 
+    - imagedefinitions.json
     - target/tweet-app.jar
-  discard-paths: yes
+
       
