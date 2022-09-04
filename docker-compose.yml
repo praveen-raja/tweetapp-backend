@@ -1,24 +1,35 @@
 version: '3.8'
+
 services:
+  
   tweet-backend:
     build: .
     restart: always
     ports: 
-      - 8001:8000
+      - 8000:8000
+  
+  zookeeper:
+    image: wurstmeister/zookeeper
+    container_name: Zookeeper
+    ports:
+    - "2181:2181"
+  
+  kafka:
+    image: wurstmeister/kafka
+    container_name: kafka
+    ports:
+    - "9092:9092"
+    links:
+      - zookeeper:zookeeper
     depends_on:
-      - mysqldb
-
-
-  mysqldb:
-    platform: linux/x86_64
-    image: "mysql:5.7"
-    restart: always
-    ports: 
-      - 3307:3306
+      - zookeeper
     environment:
-      MYSQL_DATABASE: tweetapp
-      MYSQL_USER: praveen
-      MYSQL_PASSWORD: praveen
-      MYSQL_ROOT_PASSWORD: praveen
+      KAFKA_BROKER_ID: 1
+      KAFKA_CREATE_TOPICS: "tweet"
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_HOST_NAME: localhost://:9102
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+
+
 
 
