@@ -6,10 +6,10 @@ phases:
     commands:
       - echo ENTERING PREBUILD PHASE ON `date`
       - echo "CREATING JAR FILE..."
-      - mvn clean install
+      - mvn clean install -DskipTests
       - echo "TWEET-APP.JAR CREATED SUCCESSFULLY..."
       - aws --version
-      - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+      - $(aws ecr get-login --region $AWS_DEFAULT_REGION)
       - REPOSITORY_URI=420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=build-$(echo $CODE_BUILD_ID | awk -F":" '{print $2}'
