@@ -1,3 +1,4 @@
+# Prometheus configuration
 management:
   endpoints:
     web:
@@ -24,7 +25,6 @@ spring:
     url: jdbc:mysql://tweetapp-db.cb4qwevynmpk.us-east-1.rds.amazonaws.com:3306/tweetapp?useSSL=false
   jackson:
     serialization:
-      FAIL_ON_EMPTY_BEANS: 'false'
       fail-on-empty-beans: 'false'
   database:
     driverClassName: com.mysql.cj.jdbc.Driver
