@@ -26,7 +26,6 @@ phases:
     commands: 
       - echo ENTERING POSTBUILD PHASE ON `date`
       - echo "Pushing Docker Image to ECR" 
-      - docker push $REPOSITORY_URI:latest 
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo WRITING IMAGE DEFINITIONS FILE 
       - printf '[{"name":"tweet-app","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
