@@ -4,7 +4,6 @@ services:
   
   tweet-backend:
     build: .
-    restart: always
     ports: 
       - 8000:8000
   
