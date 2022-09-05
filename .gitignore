@@ -34,3 +34,4 @@ build/
 logs/tweetapp.logs
 logs/tweetapp.logs
 *.logs
+prometheus-data/**
