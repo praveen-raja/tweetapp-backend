@@ -9,7 +9,7 @@ phases:
       - mvn clean install -DskipTests
       - echo "TWEET-APP.JAR CREATED SUCCESSFULLY..."
       - aws --version
-      - aws ecr get-login-password --region $AWS_DEFAULT_REGION
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 420738364327.dkr.ecr.us-east-1.amazonaws.com
       - REPOSITORY_URI=420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend
       #- echo "${DOCKERHUB_PASSWORD}" | docker login -u "${DOCKERHUB_USERNAME}" --password-stdin
       #- REPOSITORY_URI=https://hub.docker.com/repository/docker/praveenraja16/tweetapp
@@ -20,8 +20,8 @@ phases:
     commands: 
       - echo ENTERING BUILD PHASE ON `date` 
       - echo "BUILDING DOCKER IMAGE" 
-      - docker build -t praveenraja16/tweetapp_backend . 
-      - docker tag praveenraja16/tweetapp_backend 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest
+      - docker build -t tweetapp_backend .
+      - docker tag tweetapp_backend:latest 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest
       - echo DOCKER IMAGE BUILD SUCCESSFULLY 
      
   post_build: 
@@ -30,12 +30,10 @@ phases:
       - echo "Pushing Docker Image to ECR" 
       - docker push 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest
       - echo WRITING IMAGE DEFINITIONS FILE 
-      - printf '[{"name":"tweet-app","imageUri":"%s"}]' 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest > imagedefinitions.json
+      - printf '[{"name":"tweetapp_backend","imageUri":"%s"}]' 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest > imagedefinitions.json
       - cat imagedefinitions.json
       - echo DOKCER IMAGE PUSHED TO ECR SUCCESSFULLY 
 artifacts: 
   files: 
     - imagedefinitions.json
-    - target/tweet-app.jar
-
-      
+    - target/tweet-app.jar    
