@@ -36,3 +36,4 @@ logs/tweetapp.logs
 *.logs
 prometheus-data/**
 grafana/grafana.db
+grafana/alerting/**
