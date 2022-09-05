@@ -1,27 +1,128 @@
-version: '3'
+version: '3.6'
 
 services:
+  prometheus:
+    image: prom/prometheus:v2.21.0
+    container_name: prometheus
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus:/etc/prometheus
+      - ./prometheus-data:/prometheus
+    command: 
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    
+  grafana:
+    image: grafana/grafana:6.7.2
+    container_name: grafana
+    volumes:
+      - ./grafana:/var/lib/grafana
+      - ./grafana:/grafana/grafana-enterprise
+    ports:
+      - 3000:3001
+    environment:
+      - GF_SERVER_HTTP_PORT=3001
   
-  tweet-backend:
-    build: .
-    ports: 
-      - 8000:8000
+  Elasticsearch:
+    image: elasticsearch:7.17.3
+    container_name: elasticsearch
+    restart: always
+    volumes:
+    - elastic_data:/usr/share/elasticsearch/data/
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      discovery.type: single-node    
+    ports:
+    - '9200:9200'
+    - '9300:9300'
+    networks:
+      - tweet_network
+
+  Logstash:
+    image: logstash:7.17.0
+    container_name: logstash
+    volumes:
+    - ./logstash/:/logstash_dir
+    command: logstash -f /logstash_dir/logstash.conf 
+    depends_on:
+      - Elasticsearch
+    ports:
+    - '9600:9600'
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"    
+    networks:
+      - tweet_network
+
+  Kibana:
+    image: kibana:7.17.3
+    container_name: kibana
+    restart: always       
+    ports:
+    - '5601:5601'
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200  
+    depends_on:
+      - Elasticsearch  
+    networks:
+      - tweet_network
       
-  zookeeper-server:
-    image: wurstmeister/zookeeper
-    container_name: zookeeper
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.2.0
+    container_name: Zookeeper
     ports:
     - "2181:2181"
-  
-  kafka-server:
-    image: wurstmeister/kafka
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+    networks:
+      - tweet_network  
+
+  kafka:
+    image: confluentinc/cp-kafka:7.2.0
     container_name: kafka
     ports:
-    - "9092:9092"
+      - "9092:9092"
     depends_on:
-      - zookeeper-server
-    environment: 
-      KAFKA_ADVERTISED_HOST_NAME: localhost
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper-server:2181
+      - zookeeper
+    networks:
+      - tweet_network 
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
+      KAFKA_LISTENERS: tweetAppBackend://kafka:9092
+      KAFKA_ADVERTISED_LISTENERS: tweetAppBackend://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: tweetAppBackend:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: tweetAppBackend
       KAFKA_CREATE_TOPICS: "tweet"
-      KAFKA_BROKER_ID: 1
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  tweetAppBackend:
+    build: .
+    image: tweetappbackend
+    container_name: tweetappbackend
+    volumes:
+    - ./logstash/:/logstash
+    ports:
+      - '8000:8000'  
+    networks:
+      - tweet_network
+    depends_on:
+      - kafka  
+
+#  tweetAppFrontend:
+#    image: tweetappfrontend
+#    container_name: tweetappfrontend
+#    ports:
+#      - '3000:3000'  
+#    networks:
+#      - tweet_network
+#    depends_on:
+#      - tweetAppBackend 
+volumes:
+  elastic_data: {}
+  
+networks:
+  tweet_network:
