@@ -21,7 +21,7 @@ phases:
       - echo ENTERING BUILD PHASE ON `date` 
       - echo "BUILDING DOCKER IMAGE" 
       - docker build -t praveenraja16/tweetapp_backend . 
-      - docker tag praveenraja16/tweetapp_backend $REPOSITORY_URI:$IMAGE_TAG
+      - docker tag praveenraja16/tweetapp_backend 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest
       - echo DOCKER IMAGE BUILD SUCCESSFULLY 
      
   post_build: 
@@ -30,7 +30,7 @@ phases:
       - echo "Pushing Docker Image to ECR" 
       - docker push 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest
       - echo WRITING IMAGE DEFINITIONS FILE 
-      - printf '[{"name":"tweet-app","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"tweet-app","imageUri":"%s"}]' 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest > imagedefinitions.json
       - cat imagedefinitions.json
       - echo DOKCER IMAGE PUSHED TO ECR SUCCESSFULLY 
 artifacts: 
