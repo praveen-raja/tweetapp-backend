@@ -35,3 +35,4 @@ logs/tweetapp.logs
 logs/tweetapp.logs
 *.logs
 prometheus-data/**
+grafana/grafana.db
