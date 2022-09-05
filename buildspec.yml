@@ -8,11 +8,11 @@ phases:
       - echo "CREATING JAR FILE..."
       - mvn clean install -DskipTests
       - echo "TWEET-APP.JAR CREATED SUCCESSFULLY..."
-      #- aws --version
-      #- aws ecr get-login-password --region $AWS_DEFAULT_REGION
-      #- REPOSITORY_URI=420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend
-      - echo "${DOCKERHUB_PASSWORD}" | docker login -u "${DOCKERHUB_USERNAME}" --password-stdin
-      - REPOSITORY_URI=https://hub.docker.com/repository/docker/praveenraja16/tweetapp
+      - aws --version
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION
+      - REPOSITORY_URI=420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend
+      #- echo "${DOCKERHUB_PASSWORD}" | docker login -u "${DOCKERHUB_USERNAME}" --password-stdin
+      #- REPOSITORY_URI=https://hub.docker.com/repository/docker/praveenraja16/tweetapp
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=build-$(echo $CODE_BUILD_ID | awk -F":" '{print $2}')
       
@@ -20,15 +20,15 @@ phases:
     commands: 
       - echo ENTERING BUILD PHASE ON `date` 
       - echo "BUILDING DOCKER IMAGE" 
-      - docker build -t $REPOSITORY_URI:latest . 
-      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+      - docker build -t praveenraja16/tweetapp_backend . 
+      - docker tag praveenraja16/tweetapp_backend $REPOSITORY_URI:$IMAGE_TAG
       - echo DOCKER IMAGE BUILD SUCCESSFULLY 
      
   post_build: 
     commands: 
       - echo ENTERING POSTBUILD PHASE ON `date`
       - echo "Pushing Docker Image to ECR" 
-      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - docker push 420738364327.dkr.ecr.us-east-1.amazonaws.com/tweetapp_backend:latest
       - echo WRITING IMAGE DEFINITIONS FILE 
       - printf '[{"name":"tweet-app","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - cat imagedefinitions.json
