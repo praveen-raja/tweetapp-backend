@@ -94,11 +94,12 @@ public class TweetController {
 	@GetMapping("/login/{username}/{password}")
 	public void login(@PathVariable String username, @PathVariable String password) {
 		log.info("start login()");
-		log.info("Username from path variable " + username + ", Password from path variable" + password);
+		log.info("Username from path variable " + username + ", Password from path variable " + password);
 		Optional<User> userDetails = userRepository.findById(username);
-		//if (userDetails.isPresent()) {
-		//	kafkaTemplate.send(topic, username);
-		//}
+		if (userDetails.isPresent()) {
+			//kafkaTemplate.send(topic, username);
+			//System.out.println(userDetails);
+		}
 		String userName = userDetails.get().getEmail();
 		String passWord = userDetails.get().getPassword();
 		log.info("Username from repository " + userName + " Password from repository " + passWord);
