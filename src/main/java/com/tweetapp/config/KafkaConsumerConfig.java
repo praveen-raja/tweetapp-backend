@@ -1,4 +1,4 @@
-package com.tweetapp.config;
+/*package com.tweetapp.config;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,4 +45,4 @@ public class KafkaConsumerConfig {
 		return factory;
 	}
 
-}
+} */

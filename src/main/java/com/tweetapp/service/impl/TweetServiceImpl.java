@@ -18,7 +18,7 @@ import com.tweetapp.service.TweetService;
 @Service
 public class TweetServiceImpl implements TweetService {
 	
-	private static final Logger log = LogManager.getLogger(KafkaConsumerService.class);
+	private static final Logger log = LogManager.getLogger(TweetServiceImpl.class);
 
 	@Autowired
 	TweetRepository tweetRepository;
@@ -27,7 +27,8 @@ public class TweetServiceImpl implements TweetService {
 	CommentRepository commentRepository;
 
 	@Override
-	public boolean performLike(Long tweetId, String username) {
+	public boolean performLike(Long tweetId, String username) 
+	{
 		log.info("Start: performLike()");
 		boolean result = false;
 		log.info("Fetching the tweet Object with Id: " + tweetId);
