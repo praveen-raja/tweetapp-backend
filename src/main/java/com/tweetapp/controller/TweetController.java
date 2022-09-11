@@ -30,7 +30,7 @@ import com.tweetapp.service.impl.TweetServiceImpl;
 
 
 @RestController
-@CrossOrigin("http://localhost:4200/")
+//@CrossOrigin("http://localhost:4200/")
 public class TweetController {
 	
 	private static final Logger log = LogManager.getLogger(TweetController.class);
@@ -70,7 +70,7 @@ public class TweetController {
 		users.setLastName(user.getLastName());
 		users.setPassword(user.getPassword());
 		log.info("end registerUser()");
-		kafkaTemplate.send(topic, "User Details Are: " + user);
+		//kafkaTemplate.send(topic, "User Details Are: " + user);
 		return userRepository.save(users);
 
 	}
@@ -96,9 +96,9 @@ public class TweetController {
 		log.info("start login()");
 		log.info("Username from path variable " + username + ", Password from path variable" + password);
 		Optional<User> userDetails = userRepository.findById(username);
-		if (userDetails.isPresent()) {
-			kafkaTemplate.send(topic, username);
-		}
+		//if (userDetails.isPresent()) {
+		//	kafkaTemplate.send(topic, username);
+		//}
 		String userName = userDetails.get().getEmail();
 		String passWord = userDetails.get().getPassword();
 		log.info("Username from repository " + userName + " Password from repository " + passWord);
