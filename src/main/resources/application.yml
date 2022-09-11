@@ -22,7 +22,7 @@ spring:
   datasource:
     password: password
     username: admin
-    url: jdbc:mysql://tweetapp-db.cb4qwevynmpk.us-east-1.rds.amazonaws.com:3306/tweetapp?useSSL=false
+    url: jdbc:mysql://tweetapp.cb4qwevynmpk.us-east-1.rds.amazonaws.com:3306/tweetapp?useSSL=false
   jackson:
     serialization:
       fail-on-empty-beans: 'false'
