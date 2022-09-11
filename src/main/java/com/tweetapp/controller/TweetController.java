@@ -107,16 +107,17 @@ public class TweetController {
 		if ((userName.equals(username)) && (passWord.equals(password))) {
 			userDetails.get().setLoginId(true);
 			log.info("saving user details");
-			if (userDetails.isEmpty()) {
-				throw new RuntimeException("Could not find user using given inputs " + username + " Not Found");
-			} else {
+			//if (userDetails.isEmpty()) {
+			//	throw new RuntimeException("Could not find user using given inputs " + username + " Not Found");
+			//} 
+			//else {
 				userRepository.save(userDetails.get());
 				TweetController.loggedInUserEmailID = userName;
 				log.info(TweetController.loggedInUserEmailID);
 				log.info("end getAllUsers()");
 				TweetController.message = "successfully logged in";
 				log.info(username+ " Loggedin Successfully!!");
-			}
+			//}
 
 		} else {
 			log.info("Please check your Input");
