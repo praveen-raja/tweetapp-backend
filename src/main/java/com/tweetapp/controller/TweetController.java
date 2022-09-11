@@ -30,7 +30,7 @@ import com.tweetapp.service.impl.TweetServiceImpl;
 
 
 @RestController
-//@CrossOrigin("http://localhost:4200/")
+@CrossOrigin("http://localhost:4200/")
 public class TweetController {
 	
 	private static final Logger log = LogManager.getLogger(TweetController.class);
