@@ -1,0 +1,49 @@
+# Prometheus configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+# Sonarqube configuration      
+sonar_username: admin
+sonar_password: password
+
+# Spring configuration
+spring:
+  jpa:
+    hibernate:
+      naming-strategy: org.hibernate.dialect.MySQL5Dialect
+      ddl-auto: update
+    show-sql: 'true'
+  datasource:
+    password: password
+    username: admin
+    url: jdbc:mysql://tweetapp.cb4qwevynmpk.us-east-1.rds.amazonaws.com:3306/tweetapp?useSSL=false
+  jackson:
+    serialization:
+      fail-on-empty-beans: 'false'
+  database:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    
+# Swagger configuration
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
+    
+# Kafka configuration
+kafka:
+  server:
+    port: localhost:9092
+  topic:
+    value: tweet
+    group: tweet-1
+
+# Server port configuration
+server:
+  port: '8000'
